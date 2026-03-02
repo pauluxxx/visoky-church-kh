@@ -1,0 +1,6 @@
+export { Hero } from "./Hero"
+export { Contacts } from "./Contacts"
+export { Schedule } from "./Schedule"
+export { Requisites } from "./Requisites"
+export { Info } from "./Info"
+export { Footer } from "./Footer"

@@ -1,1 +1,58 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "system-ui", "-apple-system", "sans-serif";
+}
+
+/* Mobile-first: prevent horizontal scroll, safe areas, tap targets */
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100dvh;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Section labels/headers style */
+.section-label {
+  @apply text-xs font-bold uppercase tracking-[0.2em] mb-6 text-black/40 dark:text-white/40;
+}
+
+/* Premium typography scales */
+.hero-welcome {
+  @apply text-xl sm:text-2xl italic font-normal tracking-wide;
+}
+
+.hero-title {
+  @apply text-5xl sm:text-7xl md:text-8xl font-thin tracking-tighter;
+}
+
+/* Comfortable touch targets (min 44px) and tap feedback */
+a[href^="tel:"],
+a[href^="mailto:"],
+a[href^="https://"] {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.04);
+  tap-highlight-color: rgba(0, 0, 0, 0.04);
+  @apply transition-opacity hover:opacity-70;
+}
+
+/* Layout helpers */
+.content-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-12 py-24;
+}
+
+.footer-dark {
+  @apply bg-black text-white py-16 mt-24;
+}
