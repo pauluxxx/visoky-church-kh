@@ -15,9 +15,11 @@ export function Requisites() {
           <p className="text-[10px] opacity-40 mt-1 uppercase tracking-wider">АТ КБ "ПриватБанк"</p>
         </div>
 
-        <div className="pt-6">
-          <button className="w-full bg-black dark:bg-white text-white dark:text-black py-4 text-xs font-bold uppercase tracking-[0.2em] shadow-xl hover:opacity-80 transition-all active:scale-[0.98]">
-            Підтримати служіння
+        <div className="pt-8 flex justify-center lg:justify-start">
+          <button className="relative group overflow-hidden px-8 py-4 bg-black dark:bg-white text-white dark:text-black text-[11px] font-bold uppercase tracking-[0.3em] transition-all hover:scale-[1.02] active:scale-95 shadow-2xl">
+            <span className="relative z-10">Підтримати служіння</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 dark:via-black/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-red-500/20 to-blue-500/20 blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </button>
         </div>
       </div>
